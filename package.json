@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "concurrently 'webpack serve --config webpack.dev.js' 'json-server --watch database/db.json -p 8000'",
+    "start": "concurrently 'webpack serve --config webpack.dev.js' 'json-server --watch database/db.json -p 8001'",
     "build": "webpack --config webpack.prod.js"
   },
   "author": "",
@@ -13,8 +13,15 @@
     "angular": "^1.8.2",
     "angular-ui-router": "^1.0.28",
     "angularjs-toast": "^4.0.0",
+    "history": "^4.7.2",
     "json-server": "^0.16.3",
-    "ng-ui-router-state-events": "^1.0.1"
+    "ng-ui-router-state-events": "^1.0.1",
+    "react": "^17.0.1",
+    "react-app-polyfill": "^0.2.2",
+    "react-app-rewire-micro-frontends": "^0.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "webpack-assets-manifest": "^5.0.1"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -29,6 +36,7 @@
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.3.2",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "react-app-rewired": "^2.1.8",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",

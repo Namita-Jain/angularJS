@@ -2,6 +2,7 @@ const path = require('path');
 const common = require('./webpack.common');
 const { merge } = require('webpack-merge');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackAssetsManifest = require('webpack-assets-manifest');
 
 module.exports = merge(common, {
     mode: 'development',
@@ -14,9 +15,14 @@ module.exports = merge(common, {
         new HtmlWebpackPlugin({
             template: './app/index.html',
         }),
+        new WebpackAssetsManifest({
+        // Options go here
+            output: 'manifest.json',
+            merge: true
+        }),
     ],
     devServer: {
-        port: 3000,
+        port: 3001,
     },
     module: {
         rules: [
